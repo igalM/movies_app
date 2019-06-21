@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="col-sm-12">
+    <h1>Welcome To Herolo Movies Library!</h1>
+    <button class="addbtn" mat-raised-button color="primary" (click)="openModal()">Add a movie!</button>
+    <div class="searchBox">
+      <input type="text" #searchTerm placeholder="Search a movie" [(ngModel)]="term">
+      <i class="material-icons searchbtn" (click)="searchMovie()">search</i>
+      <p *ngIf="movieNotFound" #searchError>No such movie</p>
+    </div>
+  </div><br>
+  <div class="moviesContainer col-sm-12">
+    <app-single-movie *ngFor="let movie of (allMovies | async).movies" [singleMovie]="movie"></app-single-movie>
+  </div>
+</div>

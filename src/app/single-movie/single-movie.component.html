@@ -1,0 +1,20 @@
+<div class="singleMovieDiv">
+  <span>
+    <h5 class="movieName"><b>{{singleMovie.Title | title}}</b></h5>
+  </span><br>
+  <span>
+    <h5><u>Year:</u> {{singleMovie.Year}}</h5>
+  </span>
+  <span>
+    <h5><u>Runtime:</u> {{singleMovie.Runtime}}</h5>
+  </span>
+  <span>
+    <h5><u>Genre:</u> {{singleMovie.Genre}}</h5>
+  </span>
+  <span>
+    <h5><u>Director:</u> {{singleMovie.Director}}</h5>
+  </span>
+  <i class="material-icons editbtn" (click)="editMovie()">edit</i>
+  <i class="material-icons deletebtn" (click)="deleteMovie()">delete</i>
+  <img [src]="singleMovie.Poster" onerror="this.src='http://s011.radikal.ru/i317/1207/09/706a5f3bfe3b.jpg'">
+</div>

@@ -1,0 +1,59 @@
+.singleMovieDiv{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: silver;
+    border: 1px solid black;
+    float: left;
+    margin: 30px;
+    padding: 10px;
+    position: relative;
+    transition: transform .2s;
+    top: 25px;
+}
+.singleMovieDiv:hover{
+transform: scale(1.1);
+}
+.singleMovieDiv:hover  img{
+    display: none;
+}
+.editbtn{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 35px;
+    cursor: pointer;
+}
+.deletebtn{
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 266px;
+    font-size: 35px;
+}
+img{
+    display: inline-block;
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    margin: -10px;
+    bottom: 9px;
+}
+.movieName{
+    text-align: center;
+    color: red;
+}
+
+@media only screen and (max-width: 460px) {
+ .singleMovieDiv{
+     margin: 16px;
+     top: 15px;
+     margin-left: -60px;
+ }
+}
+
+@media only screen and (max-width: 767px) {
+   .singleMovieDiv{
+       left: 75px;
+   }
+}

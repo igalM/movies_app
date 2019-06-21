@@ -1,0 +1,33 @@
+<div *ngIf="!deleteModal">
+  <h2 mat-dialog-title><b>{{addOrEdit}} a movie</b></h2>
+  <mat-dialog-content [formGroup]="formData">
+    <mat-form-field>
+      <input matInput #title (keyup)="checkTitle()" placeholder="Enter movie title e.g 'Superman'" formControlName="Title">
+    </mat-form-field><br>
+    <mat-form-field>
+      <input matInput #year (keyup)="checkYear()" placeholder="Enter movie year e.g '1900-2018'" formControlName="Year">
+    </mat-form-field><br>
+    <div *ngIf="formData.get('Year').errors &&
+    formData.get('Year').dirty &&
+    formData.get('Year').errors.yearInvalid">Invalid
+      year</div>
+    <mat-form-field>
+      <input matInput placeholder="Enter movie length e.g '120 min'" formControlName="Runtime">
+    </mat-form-field><br>
+    <mat-form-field>
+      <input matInput placeholder="Enter movie genre e.g 'Action, Comedy'" formControlName="Genre">
+    </mat-form-field><br>
+    <mat-form-field>
+      <input matInput placeholder="Enter movie director e.g 'Steven Spielberg'" formControlName="Director">
+    </mat-form-field><br>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button (click)="addMovie()" [disabled]="!formData.valid">Save</button>
+    <button mat-button (click)="closeModal()">Cancel</button>
+  </mat-dialog-actions>
+</div>
+<div *ngIf="deleteModal">
+  <h2>Are you sure you want to delete this movie?</h2>
+  <button mat-button (click)="delete()">Ok</button>
+  <button mat-button (click)="closeModal()">Cancel</button>
+</div>

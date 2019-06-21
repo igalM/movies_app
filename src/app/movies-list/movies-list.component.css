@@ -1,0 +1,57 @@
+.col-sm-12 h1{
+    text-align: center;
+    color: red;
+}
+.addbtn{
+    position: absolute;
+    left: 43%;
+}
+.searchbtn{
+    color: red;
+    font-size: 30px;
+    position: relative;
+    top: 8px;
+    left: 12px;
+    cursor: pointer;
+}
+.searchBox{
+    position: absolute;
+    right: 0;
+    top: 45px;
+}
+p{
+    color: red;
+}
+
+@media only screen and (max-width: 992px) {
+    .addbtn{
+        left: 0;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .addbtn{
+        transform: scale(0.8);
+    }
+    .col-sm-12 h1{
+        font-size: 18px;
+    }
+    #searchTerm{
+        width: 112px;
+    }
+    .searchBox{
+        margin-top: 23px;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+    .col-sm-12 h1{
+        font-size: 24px;
+    }
+    .searchBox{
+        right: 0;
+        top: 34px;
+    }
+
+}
